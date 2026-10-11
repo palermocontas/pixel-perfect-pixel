@@ -22,7 +22,7 @@ export type SiteContent = {
 };
 
 export const defaultContent: SiteContent = {
-  heroImage: "https://cofly.app.br/api/public/img?prompt=man%20wearing%20red%20jumpsuit%20and%20Salvador%20Dali%20mask%20from%20Money%20Heist%20La%20Casa%20de%20Papel%20with%20arms%20crossed%20confident%20pose%20urban%20dark%20background%20cinematic%20lighting%20high%20detail%20portrait&width=1024&height=1024&seed=7721",
+  heroImage: "https://cofly.app.br/api/public/img?prompt=Palermo%20from%20Money%20Heist%20La%20Casa%20de%20Papel%20wearing%20red%20jumpsuit%20and%20Salvador%20Dali%20mask%20arms%20crossed%20confident%20pose%20urban%20dark%20background%20cinematic%20lighting%20high%20detail%20portrait&width=1024&height=1024&seed=7721",
   welcomeImage: welcomeImg,
   gallery: [g1, g2, g3, welcomeImg, heroImg, g1],
   heroPhrase: "A lealdade é tudo. Sem ela não somos nada.",
