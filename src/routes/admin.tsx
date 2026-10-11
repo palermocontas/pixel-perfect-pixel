@@ -125,6 +125,15 @@ function ImageField({ label, value, onChange }: { label: string; value: string; 
   );
 }
 
+function stripDefaults(f: SiteContent) {
+  const out: Record<string, unknown> = {};
+  for (const k of Object.keys(f) as (keyof SiteContent)[]) {
+    if (k === "gallery") out.gallery = f.gallery.map((g, i) => (g === defaultContent.gallery[i] ? "" : g));
+    else if (f[k] !== defaultContent[k]) out[k] = f[k];
+  }
+  return out as never;
+}
+
 function Editor() {
   const qc = useQueryClient();
   const { data } = useQuery(siteContentQuery);
@@ -138,7 +147,7 @@ function Editor() {
 
   async function save() {
     setStatus("Salvando…");
-    const { error } = await supabase.from("site_settings").update({ content: form, updated_at: new Date().toISOString() }).eq("id", 1);
+    const { error } = await supabase.from("site_settings").update({ content: stripDefaults(form), updated_at: new Date().toISOString() }).eq("id", 1);
     if (error) { setStatus("Erro ao salvar."); return; }
     await qc.invalidateQueries({ queryKey: ["site-content"] });
     setStatus("Salvo! O site já está atualizado.");
