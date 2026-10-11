@@ -91,8 +91,8 @@ function Index() {
         <div className="relative mt-4 aspect-square w-[78vw] max-w-[420px]">
           <svg viewBox="0 0 300 300" className="absolute -inset-[9%] h-[118%] w-[118%] animate-spin-slow">
             <defs><path id="ring" d="M150,150 m-138,0 a138,138 0 1,1 276,0 a138,138 0 1,1 -276,0" /></defs>
-            <text className="fill-foreground font-heading" fontSize="13" letterSpacing="3">
-              <textPath href="#ring">{ringText}{ringText}</textPath>
+            <text className="fill-foreground font-heading" fontSize="11">
+              <textPath href="#ring" textLength="860" lengthAdjust="spacing">{ringText}{ringText}</textPath>
             </text>
           </svg>
           <div className="absolute inset-0 rounded-full border-4 border-primary animate-neon-pulse" />
