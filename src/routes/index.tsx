@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { Menu, X, Shield, Flame, Link2, Car, Headphones, MessageCircle, Facebook, Instagram, Phone } from "lucide-react";
+import { Menu, X, Shield, Flame, Link2, Car, Headphones, Facebook, Instagram, Phone } from "lucide-react";
+import { WhatsAppIcon } from "@/components/whatsapp-icon";
 import { defaultContent, siteContentQuery, whatsappLink } from "@/lib/site-content";
 
 export const Route = createFileRoute("/")({
@@ -107,7 +108,7 @@ function Index() {
         </div>
         <p className="relative mt-8 max-w-md text-center font-heading text-lg uppercase tracking-wider text-muted-foreground">{c.heroPhrase}</p>
         <a href={wa} target="_blank" rel="noreferrer" className="relative mt-8 inline-flex items-center gap-3 rounded-md bg-primary px-8 py-4 font-heading text-lg font-bold uppercase tracking-widest text-primary-foreground animate-neon-pulse transition hover:scale-105">
-          <MessageCircle /> Chamar no WhatsApp
+          <WhatsAppIcon size={24} /> Chamar no WhatsApp
         </a>
       </section>
 
@@ -190,7 +191,7 @@ function Index() {
           <h2 className="font-display text-6xl uppercase sm:text-7xl">{c.ctaTitle}</h2>
           <p className="mt-4 font-heading uppercase tracking-widest">{c.heroPhrase}</p>
           <a href={wa} target="_blank" rel="noreferrer" className="mt-10 inline-flex items-center gap-3 rounded-md bg-background px-10 py-5 font-heading text-lg font-bold uppercase tracking-widest text-foreground transition hover:scale-105 hover:glow-strong">
-            <MessageCircle className="text-primary" /> Chamar no WhatsApp
+            <WhatsAppIcon size={24} className="text-primary" /> Chamar no WhatsApp
           </a>
         </Reveal>
       </section>
@@ -204,7 +205,7 @@ function Index() {
           </div>
           <div className="flex gap-3">
             {[
-              { h: wa, i: <MessageCircle size={20} />, l: "WhatsApp" },
+              { h: wa, i: <WhatsAppIcon size={20} />, l: "WhatsApp" },
               { h: c.facebook, i: <Facebook size={20} />, l: "Facebook" },
               { h: c.instagram, i: <Instagram size={20} />, l: "Instagram" },
             ].map((s) => (
@@ -217,7 +218,7 @@ function Index() {
 
       {/* WhatsApp flutuante */}
       <a href={wa} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="fixed bottom-5 right-5 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground animate-wa-pulse transition hover:scale-110">
-        <MessageCircle size={30} />
+        <WhatsAppIcon size={32} />
       </a>
     </div>
   );
