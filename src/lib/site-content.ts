@@ -22,7 +22,7 @@ export type SiteContent = {
 };
 
 export const defaultContent: SiteContent = {
-  heroImage: heroImg,
+  heroImage: "https://cofly.app.br/api/public/img?prompt=confident%20young%20brazilian%20man%20with%20arms%20crossed%20wearing%20black%20streetwear%20jacket%20urban%20dark%20background%20cinematic%20lighting%20high%20detail%20portrait&width=1024&height=1024&seed=8842",
   welcomeImage: welcomeImg,
   gallery: [g1, g2, g3, welcomeImg, heroImg, g1],
   heroPhrase: "A lealdade é tudo. Sem ela não somos nada.",

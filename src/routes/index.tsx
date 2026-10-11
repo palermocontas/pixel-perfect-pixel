@@ -96,7 +96,7 @@ function Index() {
             </text>
           </svg>
           <div className="absolute inset-0 rounded-full border-4 border-primary animate-neon-pulse" />
-          <img src={c.heroImage} alt="Palermo Contas" width={1024} height={1024} className="absolute inset-[6px] h-[calc(100%-12px)] w-[calc(100%-12px)] rounded-full object-cover" />
+          <img src={c.heroImage} alt="Palermo Contas - braços cruzados" width={1024} height={1024} className="absolute inset-[6px] h-[calc(100%-12px)] w-[calc(100%-12px)] rounded-full object-cover [object-position:center_18%]" style={{ objectPosition: "center 18%" }} />
           <div className="absolute -left-6 top-1/4 flex h-16 w-16 items-center justify-center rounded-2xl border border-primary bg-card glow animate-floaty"><UberIcon /></div>
           <div className="absolute -right-6 bottom-1/4 flex h-16 w-16 items-center justify-center rounded-2xl border border-primary bg-card glow animate-floaty [animation-delay:1.5s]"><NinetyNineIcon /></div>
         </div>
